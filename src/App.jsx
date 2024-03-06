@@ -4,10 +4,10 @@ import "./App.css";
 import { MainRouter } from "./router";
 import { GlobalProvider } from "./store";
 import { ConfigProvider } from "antd";
-import { useGlobalState } from "./hooks";
-import { GROUPID, IMAGES_DOMAIN, callApi } from "./services";
+
 
 function App() {
+
 
   
   return (

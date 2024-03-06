@@ -34,29 +34,30 @@ const Footer = () => {
 
   // Chuyển đối tượng thành mảng để render
   const menuItems = Object.values(menuMap);
-  console.log(menuItems);
 
   return (
-    <div className=" bg-footer bg-no-repeat bg-top  bg-cover w-full ">
+    <div className=" bg-footer bg-no-repeat bg-top  bg-cover w-full">
       <div className="bg-footermask flex flex-col p-4">
         <div className=" w-full z-30">
           <Card className=" bg-transparent container  border-0">
-            <div className="flex">
+            <div className="grid grid-cols-4 max-md:grid-cols-1">
               {menuItems.map((menu, index) => (
                 <div key={index} style={{ flex: "0 0 25%" }}>
-                  <h2 className="text-primary text-lg font-medium">
+                  <h2 className="text-primary text-xl font-medium">
                     {menu.MenuName}
                   </h2>
                   <List
                     dataSource={menu.items}
                     renderItem={(item) => (
-                      <li className="mt-3 text-md text-white">
+                      <li className="mt-3 text-lg text-white !hover:text-green">
                         <i className="fa-solid fa-angle-right"></i>{" "}
-                        <Link
-                          to={{
+                        <Link className="text-inherit"
+                          to={
+                            {
                             pathname: `/${RemoveDau(menu.MenuName.split(" ").join("-").toLowerCase())}`,
                             search: `?title=${item?.MenuUrl}`
-                          }}
+                          }
+                        }
                         >
                           {item.MenuName}
                         </Link>
@@ -79,7 +80,7 @@ const Footer = () => {
                 - Viễn thông toàn cầu
               </p>
               <ul>
-                <li className="flex items-center justify-start gap-4 cursor-pointer hover:text-primary">
+                <li className="flex items-center justify-start gap-4 cursor-pointer hover:text-green">
                   <RightOutlined
                     className="text-greenlight font-bold"
                     style={{ fontSize: "16px", fontWeight: "400" }}

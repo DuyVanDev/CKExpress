@@ -61,6 +61,15 @@ ul.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.bg-primary.css-dev-
 :where(.css-dev-only-do-not-override-asz0wb).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub {
 overflow: unset !important;
 }
+span.ant-menu-title-content {
+  color: white !important;
+}
+:where(.css-dev-only-do-not-override-asz0wb).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected::after {
+  color: transparent !important;
+}
+li.ant-menu-submenu.ant-menu-submenu-horizontal.bg-primary.w-auto.text-white.font-medium.text-md.order-5.ant-menu-submenu-selected::after {
+  display: none !important;
+}
 /* end header */
 
 ::-webkit-scrollbar-track {
@@ -120,9 +129,7 @@ overflow: unset !important;
   transition: 0.3s;
 }
 
-.caret-rotate {
-  transform: rotate(180deg);
-}
+
 
 .select {
   color: black;
@@ -130,6 +137,10 @@ overflow: unset !important;
   justify-content: center;
   align-items: center;
   transition: background 0.3s;
+}
+
+.select:hover .caret {
+  transform: rotate(180deg);
 }
 
 .select-clicked {
@@ -156,11 +167,11 @@ overflow: unset !important;
   cursor: pointer;
 }
 
-
-.menu-open {
+.select:hover .menu {
   display: block;
   opacity: 1;
 }
+
 
 .swiper-button-prev, .swiper-button-next {
   color: white !important;
@@ -200,4 +211,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active  {
 :where(.css-dev-only-do-not-override-asz0wb).ant-card .ant-card-body {
   padding : 0;
 }
+
+.ant-list-items li:hover {
+  color : #bae6bd !important;
+}
 /* end Footer */
+
+ol {
+  list-style: auto;
+  padding-left:30px ;
+}

@@ -24,9 +24,7 @@ const InfoCompany = lazy(() => import("@/pages/InfoCompany"));
 const CommonPage = lazy(() => import("@/pages/CommonPage"));
 const Service = lazy(() => import("@/pages/Service"));
 const Complain = lazy(() => import("@/pages/Complain"));
-const ExpressDeliveryIN = lazy(() =>
-  import("@/pages/InternationalService/ExpressDeliveryIN")
-);
+
 export const publicRoute = [
   {
     path: routes.home,
@@ -38,11 +36,7 @@ export const publicRoute = [
     childrend: About,
     layout: DefaultLayout,
   },
-  {
-    path: routes.expressDelivery,
-    childrend: ExpressDeliveryIN,
-    layout: DefaultLayout,
-  },
+
   {
     path: routes.companyProfile,
     childrend: CompanyProfile,
@@ -110,7 +104,7 @@ export const publicRoute = [
   },
   {
     path: routes.serviceDetail,
-    childrend: ServiceDetail,
+    childrend: CommonPage,
     layout: DefaultLayout,
   },
   {

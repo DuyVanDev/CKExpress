@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { useGlobalState } from "@/hooks";
 
 const MenuPc = () => {
-  const [ globalState, dispatch] = useGlobalState()
+  const [globalState, dispatch] = useGlobalState();
   const { setting } = globalState;
   const lg = [
     {
@@ -50,31 +50,7 @@ const MenuPc = () => {
   );
   const [language, setLanguage] = useState(lg[0]);
   const [hover, setHover] = useState(false);
-  const items = [
-    {
-      label: "1st menu item",
-      key: "1",
-      icon: <UserOutlined />,
-    },
-    {
-      label: "2nd menu item",
-      key: "2",
-      icon: <UserOutlined />,
-    },
-    {
-      label: "3rd menu item",
-      key: "3",
-      icon: <UserOutlined />,
-      danger: true,
-    },
-    {
-      label: "4rd menu item",
-      key: "4",
-      icon: <UserOutlined />,
-      danger: true,
-      disabled: true,
-    },
-  ];
+
   return (
     <>
       <div className=" bg-white">
@@ -85,20 +61,7 @@ const MenuPc = () => {
             </Link>
             <div className="flex items-center gap-4">
               <div>
-                <span
-                  className="block py-2 px-3 text-black md:p-0 "
-                >
-                  Giờ làm việc:{" "}
-                  <span className="text-primary font-medium">
-                    08:00 - 20:00
-                  </span>
-                </span>
-              </div>
-              <span>|</span>
-              <div>
-                <span
-                  className="block py-2 px-3 text-black md:p-0 "
-                >
+                <span className="block py-2 px-3 text-black md:p-0 ">
                   Hotline:{" "}
                   <span className="text-primary font-medium">
                     {setting.Hotline}
@@ -112,17 +75,14 @@ const MenuPc = () => {
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
               >
-                <div className="select text-black flex gap-2 items-center cursor-pointer">
+                <div className="select text-black flex gap-2 items-center cursor-pointer ">
                   <span className="selected whitespace-nowrap text-md font-medium ">
                     {language.title}
                   </span>
-                  <img className="w-10" src={language.img} alt="" />
-                  <div className={`caret ${hover && "caret-rotate"} `}></div>
-                </div>
-                <ul
-                  className={`menu ${
-                    hover && "menu-open"
-                  } mt-[-8px] flex justify-center flex-col shadow-lg rounded-md bg-white z-[100]`}
+                  <img className="w-8" src={language.img} alt="" />
+                  <div className={`caret  `}></div>
+                  <ul
+                  className={`menu  mt-[-24px]  justify-center flex-col shadow-lg rounded-md bg-white z-[100] `}
                 >
                   {lg.map((item, index) => (
                     <li
@@ -140,29 +100,8 @@ const MenuPc = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div>
-                <Link
-                  to="/dang-ky"
-                  className="block py-2 px-3 text-black md:p-0 "
-                >
-                  <Button className="border-primary text-primary hover:text-gray hover:border-gray">
-                    Đăng ký
-                  </Button>
-                </Link>
-              </div>
-              <div>
-                <Link
-                  to="/dang-nhap"
-                  className="block py-2 px-3 text-black md:p-0 "
-                >
-                  <Button
-                    type="primary"
-                    className="border-primary text-white bg-primary hover:text-gray "
-                  >
-                    Đăng nhập
-                  </Button>
-                </Link>
+                </div>
+                
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import AnotherServices from "@/components/AnotherServices";
+import Loading from "@/components/Loading";
 import { useGlobalState } from "@/hooks";
 import parse from "html-react-parser";
 
@@ -9,18 +10,25 @@ const CommonPage = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const paramValue = queryParams.get("title");
-  console.log(paramValue);
   const [globalState, dispatch] = useGlobalState();
   const { news } = globalState;
-  
 
-  const data = Array.isArray(news) &&  news?.find(item => item.UrlDetail.replace(/[^\w\s]/gi, '').toLowerCase().split(" ").join("-") == paramValue) 
-   return (
-    <div className="container bg-background">
-      <div className="flex  gap-6 p-6 max-md:flex-col">
+
+  const data =
+    Array.isArray(news) && news?.find((item) => item.UrlDetail == paramValue);
+  return (
+    <div className="container ">
+      <div className="flex  gap-6 pb-6 max-md:flex-col max-md:px-3">
         <div className="basis-9/12">
           <div className="w-[90%]">
-          {data && parse(data?.NewsContent)}
+            {!data ? (
+              <Loading />
+            ) : (
+              <>
+                <h2 className="text-5xl font-bold mb-4">{data?.NewsTitle}</h2>
+                {parse(data?.NewsContent)}
+              </>
+            )}
           </div>
         </div>
         <div className="basis-3/12">

@@ -15,7 +15,6 @@ export const Shop_spWeb_Setting_List = async (dispatch) => {
   };
   try {
     const result2 = await callApi.Main(params2);
-    console.log(result2)
     let Logo =
       IMAGES_DOMAIN +
       result2
@@ -63,9 +62,13 @@ export const Shop_spWeb_Setting_List = async (dispatch) => {
     let QRCode = result2.find(
       (e) => e.KeySetting === "QRCode"
     )?.DataSetting;
+    let test = result2.find(
+      (e) => e.KeySetting === "ax"
+    )?.DataSetting;
 
 
     let data = {
+      test,
       Logo,
       Email,
       Slogan,

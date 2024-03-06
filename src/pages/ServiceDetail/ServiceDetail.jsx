@@ -14,13 +14,13 @@ const ServiceDetail = () => {
 
    return (
     <div className="container bg-background">
-      <div className="flex  gap-6 p-6 max-md:flex-col">
-        <div className="basis-9/12">
+      <div className="flex  gap-6 py-6 max-md:flex-col">
+        <div className="basis-8/12">
           <div className="w-[90%]">
           {data && parse(data?.NewsContent)}
           </div>
         </div>
-        <div className="basis-3/12">
+        <div className="basis-4/12">
           <AnotherServices />
         </div>
       </div>

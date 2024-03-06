@@ -1,7 +1,4 @@
 import React, { useMemo, useState } from "react";
-import { data } from "./handleData";
-import images from "@/config/images";
-import { FormatDataMenu } from "@/utils/FormatDataMenu";
 import { useGlobalState } from "@/hooks";
 import { Link, useLocation } from "react-router-dom";
 import { Menu } from "antd";
@@ -24,14 +21,14 @@ const RecursiveMenu = () => {
           <SubMenu
             className="bg-primary w-auto text-white font-medium text-md order-5"
             key={item.Id}
-            title={<div className="flex items-center gap-2">{item.MenuName} <i className={`${item.IconClass}`}></i></div>}
+            title={<div className="flex items-center gap-2 text-md">{item.MenuName} <i className={`${item.IconClass}`}></i></div>}
           >
             {buildMenu(menuItems, item.Id)}
             
           </SubMenu>
         ) : (
           <Menu.Item className={`bg-primary text-white font-medium text-md ${item.MenuName == "Trang chủ" ? 'order-0' : 'order-9'} ${location.pathname == '/' &&  item.MenuUrl == ''  ? 'ant-menu-item-selected' : ''}`} key={item.Id}>
-           <Link to={`/${item.MenuUrl || ''}`}> {item.MenuName} </Link>
+           <Link to={`/${item?.MenuUrl || ''}`}> {item.MenuName} </Link>
           </Menu.Item>
         );
       });

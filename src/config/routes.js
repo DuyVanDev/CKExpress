@@ -3,7 +3,6 @@ const routes = {
   aboutUs: "/tong-quan-ve-cong-ty",
   infoCompany: "/thong-tin-cong-ty",
   contact: "/contact",
-  expressDelivery: "/chuyen-phat-nhanh",
   economyShipping: "/thue-kho-fulfillment-logistics",
   companyProfile: "/ho-so-cong-ty",
   registerPartner: "doi-tac",

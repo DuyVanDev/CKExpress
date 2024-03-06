@@ -27,9 +27,7 @@ export const MainRouter = () => {
     Shop_spWeb_Slide_List(dispatch)
     Shop_spWeb_Service_List(dispatch)
     Shop_spWeb_News_List(dispatch)
-
-    
-  }, []);
+  }, [dispatch]);
 
 
   return (
@@ -49,7 +47,7 @@ export const MainRouter = () => {
                   <Layout>
                     <PublicRoute>
                       <Component />
-                      <Chat />
+                      {/* <Chat /> */}
                       <Anchor />
                     </PublicRoute>
                   </Layout>

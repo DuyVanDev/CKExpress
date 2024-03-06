@@ -11,17 +11,16 @@ import Profive from "@/components/Profive/Profive";
 import Partner from "@/components/Partner";
 import Download from "@/components/Download";
 import { useGlobalState } from "@/hooks";
-import { useEffect } from "react";
-import { GROUPID, IMAGES_DOMAIN, callApi } from "@/services";
-import { addAbout, addMenu, addSetting, addSlide } from "@/store";
+import parse from "html-react-parser"
+
 
 const Home = () => {
   const [globalState, dispatch] = useGlobalState();
   const { setting, menu, slide } = globalState;
-  console.log(menu)
+  console.log(setting)
 
   return (
-    <div>
+    <div className="">
       <Banner slide={slide}/>
       <div className="">
         <Shadow />

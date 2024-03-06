@@ -17,20 +17,20 @@ const Complain = () => {
     { value: "3", label: "Khiếu nại về COD" },
   ];
   return (
-    <div className="flex container justify-center gap-4 py-10 max-lg:flex-col text-black">
+    <div className="flex container justify-center gap-4  max-lg:flex-col text-black">
       <div className="flex-1 text-inherit">
         <h2 className="text-3xl font-bold">Khiếu nại</h2>
 
         <InputComp label={"Họ & tên"} placeholder="Họ & tên" require />
-        <InputComp label={"Họ & tên"} placeholder="Họ & tên" require />
-        <InputComp label={"Họ & tên"} placeholder="Họ & tên" require />
-        <Typography.Title level={5} className="text-inherit">
+        <InputComp label={"Số điện thoại"} placeholder="Số điện thoại" require />
+        <InputComp label={"Mã vận đơn"} placeholder="Mã vận đơn" require />
+        <Typography.Title level={5} className="text-primary">
           Loại yêu cầu<span className="text-red">(*)</span>
         </Typography.Title>
         <Select
           options={data}
         />
-        <Typography.Title level={5} className="text-inherit mt-4">
+        <Typography.Title level={5} className="text-primary mt-4">
           Nội dung<span className="text-red">(*)</span>
         </Typography.Title>
         <InputArea 

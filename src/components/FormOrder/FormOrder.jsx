@@ -30,7 +30,6 @@ const FormOrder = () => {
 
   const handleToStateChange = (selectedOption) => {
     setSelectedToState(selectedOption);
-    console.log(selectedOption);
 
     // Lấy danh sách các thành phố của tỉnh/thành phố được chọn
     const citiesData = City.getCitiesOfState("VN", selectedOption.value);
@@ -40,11 +39,9 @@ const FormOrder = () => {
 
   const handleFromCityChange = (selectedOption) => {
     setSelectedFromCity(selectedOption);
-    console.log(toCities);
   };
 
   const handleToCityChange = (selectedOption) => {
-    console.log(selectedOption);
     setSelectedToCity(selectedOption);
 
     // Lấy danh sách các thành phố của tỉnh/thành phố được chọn
@@ -76,7 +73,7 @@ const FormOrder = () => {
         <div>
           {/* <Select options={countryData} placeholder={"Tinh"}/> */}
           <Selector
-            label={"Gửi từ"}
+            label={"Gửi đến"}
             selected={selectedToState}
             onSelected={handleToStateChange}
             data={toStates}
@@ -85,7 +82,7 @@ const FormOrder = () => {
         <div>
           {/* <Select options={countryData} placeholder={"Tinh"}/> */}
           <Selector
-          placeholder={toCities.length > 0 ? "Chọn quận huyện" : ""}
+            placeholder={toCities.length > 0 ? "Chọn quận huyện" : ""}
             label={"Quận huyện"}
             selected={selectedToCity}
             onSelected={handleToCityChange}
@@ -98,17 +95,17 @@ const FormOrder = () => {
           <Typography.Title level={5}>
             Trọng lượng (Gram)<span className="text-red">*</span>
           </Typography.Title>
-          <Input className="h-10" placeholder="Input 1" />
+          <Input className="h-10" defaultValue={0} />
         </div>
         <div>
           <Typography.Title level={5}>Tiền thu hộ (VNĐ)</Typography.Title>
-          <Input className="h-10" placeholder="Input 1" />
+          <Input className="h-10" defaultValue={0} />
         </div>
       </div>
       <div className="grid grid-cols-6 gap-4">
         <div className="col-span-3">
           <Typography.Title level={5}>Hàng hóa khai giá (VNĐ)</Typography.Title>
-          <Input className="h-10 " placeholder="Input 1" />
+          <Input className="h-10" defaultValue={0} />
         </div>
         <div className=" col-span-3">
           <Typography.Title level={5}>
@@ -116,9 +113,9 @@ const FormOrder = () => {
           </Typography.Title>
 
           <div className="grid grid-cols-3 gap-2">
-            <Input className="h-10" placeholder="Input 1" />
-            <Input className="h-10" placeholder="Input 1" />
-            <Input className="h-10" placeholder="Input 1" />
+            <Input className="h-10" defaultValue={0} />
+            <Input className="h-10" defaultValue={0} />
+            <Input className="h-10" defaultValue={0} />
           </div>
         </div>
       </div>

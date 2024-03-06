@@ -87,7 +87,7 @@ const Shadow = () => {
           >
             <Search
               placeholder="Nhập mã vận đơn"
-              enterButton="Search"
+              enterButton="Tra cứu"
               size="large"
             />
           </TabPane>
@@ -130,7 +130,7 @@ const Shadow = () => {
             <div className="flex  justify-center gap-4">
               <div className="flex-1 flex flex-col  gap-4">
                 <Search
-                  placeholder="input search text"
+                  placeholder="Nhập tên bưu cục hoặc địa chỉ, nhấn enter để tìm kiếm ..."
                   enterButton
                   className="px-3"
                 />

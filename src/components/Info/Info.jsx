@@ -4,19 +4,27 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import images from "@/config/images";
 import { useGlobalState } from "@/hooks";
+import { Link } from "react-router-dom";
 
 const Info = () => {
   const [globalState, dispatch] = useGlobalState();
-  const { menu, services } = globalState;
-  
+  const { menu, news } = globalState;
+  const services =
+    Array.isArray(news) &&
+    news.filter(
+      (item) => item?.MenuName == "Dịch vụ"
+    );
+  console.log(services);
   // const [indexTab, setIndexTab] = useState(0);
   const renderContent = () => {
     if (services.length > 0) {
-      const card = services;
       return (
         <div className="flex flex-wrap items-center justify-center gap-4 ">
-          {card?.map((items, index) => (
-            <div
+          {Array.isArray(services) && services?.map((item, index) => (
+            <Link to={{
+              pathname : "/dich-vu",
+            search : `title=${item?.UrlDetail}`
+            }}
               className={``}
               key={index}
             >
@@ -25,10 +33,10 @@ const Info = () => {
               >
                 <img className="w" src={"https://admin-netco.vps.vn//Image/ckfinder/images/Vector.png"} />
                 <p className="group-hover:text-white text-sm text-center font-bold text-gray">
-                  {items?.MenuName}
+                  {item?.NewsTitle}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       );

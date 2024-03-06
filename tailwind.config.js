@@ -44,10 +44,9 @@ export default {
         footer: "url('@/assets/background/bg-footer.jpg')",
         login: "url('@/assets/background/bg-login.jpg')",
         about: "url('@/assets/background/bg-about.png')",
-        "primary-gradient":
-          "linear-gradient(to right, #3439D7 0%, #24E9E2 100%)",
         "bg-overlay":
           "linear-gradient(141deg, #0e68c8, #02a4a5, rgba(0,0,0,.30))",
+          'title-gradient' : 'linear-gradient(to right, #f97316 0%, #fdbd00 100%)',
       },
       backgroundColor: {
         overlay: "rgba(6, 17, 15, 0.767)",

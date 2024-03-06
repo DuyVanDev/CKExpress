@@ -14,7 +14,6 @@ const Chat = () => {
   const [globalState] = useGlobalState();
   const handleShow = () => {
     setShow(true);
-    console.log(1);
   };
   const handleClose = (e) => {
     e.stopPropagation();

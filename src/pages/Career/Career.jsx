@@ -29,7 +29,7 @@ const Career = () => {
     accessor: 'friend.age'
   }]
   return (
-    <div className="container py-8">
+    <div className="container py-8 ">
       <ReactTable
         className="-striped -highlight"
         columns={columns}

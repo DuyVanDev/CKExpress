@@ -14,7 +14,7 @@ const InfoCompany = () => {
 
    return (
     <div className="container bg-background">
-      <div className="flex  gap-6 p-6 max-md:flex-col">
+      <div className="flex  gap-6 py-6 max-md:flex-col">
         <div className="basis-9/12">
           <div className="w-[90%]">
           {data && parse(data?.NewsContent)}
