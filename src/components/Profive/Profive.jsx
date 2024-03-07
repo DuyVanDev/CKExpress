@@ -5,7 +5,7 @@ import images from "@/config/images";
 const Profive = () => {
 
   return (
-    <div className="bg-lightgreen">
+    <div className="bg-lightgreen max-md:px-4">
       <div className=" container flex justify-center items-center">
       <div className="basis-3/12 flex flex-col gap-4 text-center">
         <div className="flex flex-col gap-1">

@@ -1,5 +1,4 @@
 import images from "@/config/images";
-import { dataTop } from "./handleData";
 import RecursiveMenu from "./RecursiveMenu";
 import PropTypes from "prop-types";
 import { UserOutlined } from "@ant-design/icons";

@@ -1,7 +1,3 @@
-import Logo from "../assets/logo/logo.png";
-import Contacts from "../assets/menu/contacts.png";
-import Messenger from "../assets/menu/messenger.png";
-import User from "../assets/menu/user.png";
 import Zalo from "../assets/menu/zalo.png";
 import BannerContact from "../assets/contact/banner.png";
 import BannerMaketing from "../assets/maketting/banner.png";
@@ -24,14 +20,10 @@ import TwiterIcon from "../assets/icons/gg-square.png";
 import DeliveryMan from "../assets/icons/delivery-man.png";
 
 export default {
-  Logo,
   DeliveryMan,
   TwiterIcon,
   GoogleIcon,
   FaceBookIcon,
-  Contacts,
-  Messenger,
-  User,
   Zalo,
   BannerContact,
   BannerMaketing,

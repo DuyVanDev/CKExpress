@@ -14,7 +14,6 @@ const Info = () => {
     news.filter(
       (item) => item?.MenuName == "Dịch vụ"
     );
-  console.log(services);
   // const [indexTab, setIndexTab] = useState(0);
   const renderContent = () => {
     if (services.length > 0) {

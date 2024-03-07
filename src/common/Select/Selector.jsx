@@ -8,7 +8,7 @@ const Selector = ({ data ,selected, onSelected, label, placeholder=""}) => {
   
 
   return (
-    <div>
+    <div className="max-md:w-full">
       <Typography.Title level={5} className="text-inherit">
         {label} <span className="text-red">(*)</span>
       </Typography.Title>

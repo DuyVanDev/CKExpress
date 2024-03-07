@@ -18,7 +18,7 @@ const CommonPage = () => {
     Array.isArray(news) && news?.find((item) => item.UrlDetail == paramValue);
   return (
     <div className="container ">
-      <div className="flex  gap-6 pb-6 max-md:flex-col max-md:px-3">
+      <div className="flex  gap-6 pb-6 max-md:flex-col max-md:px-4">
         <div className="basis-9/12">
           <div className="w-[90%]">
             {!data ? (

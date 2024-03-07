@@ -4,7 +4,7 @@ import React from "react";
 const Download = ({ setting }) => {
 
   return (
-    <div className="bg-lightgreen">
+    <div className="bg-lightgreen max-md:px-4">
       <div className="container flex items-center gap-3 pt-10 max-lg:flex-col">
         <div className="flex-1">
           <img src="https://ckexpress.vn/assets/gtel/App%20installation-cuate.png" alt="" />

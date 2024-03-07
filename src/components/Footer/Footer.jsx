@@ -36,8 +36,8 @@ const Footer = () => {
   const menuItems = Object.values(menuMap);
 
   return (
-    <div className=" bg-footer bg-no-repeat bg-top  bg-cover w-full">
-      <div className="bg-footermask flex flex-col p-4">
+    <div className=" bg-footer bg-no-repeat bg-top  bg-cover w-full ">
+      <div className="bg-footermask flex flex-col p-4 max-md:px-4">
         <div className=" w-full z-30">
           <Card className=" bg-transparent container  border-0">
             <div className="grid grid-cols-4 max-md:grid-cols-1">

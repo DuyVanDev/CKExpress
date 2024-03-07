@@ -14,7 +14,6 @@ const AnotherServices = () => {
     news.filter(
       (item) => item?.MenuName == "Dịch vụ" && item?.UrlDetail != paramValue
     );
-  console.log(services);
   return (
     <div className="flex flex-col gap-2">
       <p className="text-2xl font-medium">Dịch vụ khác</p>

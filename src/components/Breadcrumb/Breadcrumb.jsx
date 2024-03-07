@@ -14,7 +14,6 @@ const Breadcrumb = () => {
   const { menu, news } = globalState;
 
   const link = menu.find((item) => item?.MenuUrl == pathName);
-  console.log(link)
   const detail =
     searchParam &&
     Array.isArray(news) &&

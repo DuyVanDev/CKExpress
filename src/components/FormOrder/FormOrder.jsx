@@ -44,13 +44,11 @@ const FormOrder = () => {
   const handleToCityChange = (selectedOption) => {
     setSelectedToCity(selectedOption);
 
-    // Lấy danh sách các thành phố của tỉnh/thành phố được chọn
   };
   return (
     <div className="flex flex-col gap-4">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1 max-md:px-4">
         <div>
-          {/* <Select options={countryData} placeholder={"Tinh"}/> */}
           <Selector
             label={"Gửi từ"}
             selected={selectedFromState}
@@ -59,7 +57,6 @@ const FormOrder = () => {
           />
         </div>
         <div>
-          {/* <Select options={countryData} placeholder={"Tinh"}/> */}
           <Selector
             placeholder={fromCities.length > 0 ? "Chọn quận huyện" : ""}
             label={"Quận huyện"}
@@ -68,8 +65,6 @@ const FormOrder = () => {
             data={fromCities}
           />
         </div>
-      </div>
-      <div className="grid grid-cols-2 gap-4">
         <div>
           {/* <Select options={countryData} placeholder={"Tinh"}/> */}
           <Selector
@@ -89,8 +84,6 @@ const FormOrder = () => {
             data={toCities}
           />
         </div>
-      </div>
-      <div className="grid grid-cols-2 gap-4">
         <div>
           <Typography.Title level={5}>
             Trọng lượng (Gram)<span className="text-red">*</span>
@@ -101,23 +94,23 @@ const FormOrder = () => {
           <Typography.Title level={5}>Tiền thu hộ (VNĐ)</Typography.Title>
           <Input className="h-10" defaultValue={0} />
         </div>
-      </div>
-      <div className="grid grid-cols-6 gap-4">
-        <div className="col-span-3">
-          <Typography.Title level={5}>Hàng hóa khai giá (VNĐ)</Typography.Title>
-          <Input className="h-10" defaultValue={0} />
-        </div>
-        <div className=" col-span-3">
-          <Typography.Title level={5}>
-            Kích thước (Dài x Rộng x Cao) (cm)
-          </Typography.Title>
-
-          <div className="grid grid-cols-3 gap-2">
-            <Input className="h-10" defaultValue={0} />
-            <Input className="h-10" defaultValue={0} />
+        <div className="">
+            <Typography.Title level={5}>
+              Hàng hóa khai giá (VNĐ)
+            </Typography.Title>
             <Input className="h-10" defaultValue={0} />
           </div>
-        </div>
+          <div className="">
+            <Typography.Title level={5}>
+              Kích thước (Dài x Rộng x Cao) (cm)
+            </Typography.Title>
+
+            <div className="grid grid-cols-3 gap-2">
+              <Input className="h-10" defaultValue={0} />
+              <Input className="h-10" defaultValue={0} />
+              <Input className="h-10" defaultValue={0} />
+            </div>
+          </div>
       </div>
 
       <div className="w-full flex items-center justify-center gap-2">

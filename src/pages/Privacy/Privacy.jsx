@@ -5,7 +5,6 @@ import parse from "html-react-parser";
 const Privacy = () => {
   const [globalState, dispatch] = useGlobalState();
   const { setting } = globalState;
-  console.log(setting.PrivacyPolicy);
   const options = {
     replace: (node) => {
       if (node.name === "img") {

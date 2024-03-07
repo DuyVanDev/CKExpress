@@ -36,7 +36,7 @@ const MenuMobile = ({ open, onClose, innerWidth }) => {
         );
         return hasChildren ? (
           <SubMenu
-            className=" w-auto !text-black font-medium text-md"
+            className=" w-auto !text-black font-medium text-md order-5"
             key={item.Id}
             title={
               <div className="flex text-black justify-between items-center gap-2">
@@ -49,9 +49,9 @@ const MenuMobile = ({ open, onClose, innerWidth }) => {
         ) : (
           <Menu.Item
             className={` text-black font-medium text-md  ${
-              location.pathname == "/" && item.MenuUrl == ""
-                ? "ant-menu-item-selected"
-                : ""
+              location.pathname == "/" && item.MenuUrl == undefined
+                ? "ant-menu-item-selected order-0"
+                : "order-6"
             }`}
             key={item.Id}
           >
@@ -85,7 +85,7 @@ const MenuMobile = ({ open, onClose, innerWidth }) => {
           open ? "h-auto" : "h-0 "
         } overflow-hidden transition-all delay-100`}
       >
-        <Menu className="" mode="inline" disabledOverflow={true}>
+        <Menu className="flex flex-col" mode="inline" disabledOverflow={true}>
           {buildMenu(menuHeader)}
         </Menu>
 

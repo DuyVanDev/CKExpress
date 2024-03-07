@@ -16,8 +16,7 @@ import parse from "html-react-parser"
 
 const Home = () => {
   const [globalState, dispatch] = useGlobalState();
-  const { setting, menu, slide } = globalState;
-  console.log(setting)
+  const { setting, slide } = globalState;
 
   return (
     <div className="">

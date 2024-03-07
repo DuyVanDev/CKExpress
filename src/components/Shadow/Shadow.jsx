@@ -204,7 +204,7 @@ const Shadow = () => {
               <RightOutlined />
             </p>
           </Link>
-          <div className="flex items-center gap-4 shadow-md rounded-md bg-white p-4 mt-4">
+          <Link to={"/diem-gui-hang"} className="flex items-center gap-4 shadow-md rounded-md bg-white p-4 mt-4">
             <span>
               <img
                 src="https://admin-netco.vps.vn//Image/ckfinder/images/assets/icon24/Fill%20972.png"
@@ -215,7 +215,7 @@ const Shadow = () => {
             <p>
               <RightOutlined />
             </p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

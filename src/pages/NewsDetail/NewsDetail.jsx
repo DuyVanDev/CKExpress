@@ -13,7 +13,7 @@ const NewsDetail = () => {
   const data =
     Array.isArray(news) && news?.find((item) => item?.UrlDetail == paramValue);
   return (
-    <div className="container py-4 max-md:px-3">
+    <div className="container py-4 max-md:px-4">
       <h1 className="text-5xl font-bold mb-4">{data?.NewsTitle}</h1>
 
       {!data ? (
