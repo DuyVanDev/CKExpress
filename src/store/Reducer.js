@@ -6,6 +6,7 @@ import {
   ADD_SERVICE,
   ADD_SETTING,
   ADD_NEWS,
+  ADD_CAREER,
 } from "./Contants";
 
 const menu = localStorage.getItem("menu");
@@ -14,6 +15,7 @@ const slide = localStorage.getItem("slide");
 const services = localStorage.getItem("services");
 const about = localStorage.getItem("about");
 const news = localStorage.getItem("news");
+const career = localStorage.getItem("career");
 
 export const initState = {
   menu: menu ? JSON.parse(menu) : [],
@@ -22,6 +24,7 @@ export const initState = {
   services: services ? JSON.parse(services) : [],
   about: about ? JSON.parse(about) : {},
   news: news ? JSON.parse(news) : {},
+  career: career ? JSON.parse(career) : {},
 };
 
 export const reducer = (state, action) => {
@@ -56,6 +59,11 @@ export const reducer = (state, action) => {
       return {
         ...state,
         news: action.payload,
+      };
+    case ADD_CAREER:
+      return {
+        ...state,
+        career: action.payload,
       };
     default:
       return state;

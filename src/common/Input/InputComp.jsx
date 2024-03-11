@@ -6,7 +6,7 @@ const InputComp = ({ label, placeholder = "", type = "text", require = false, na
     <div className={`mb-3 ${className}`}>
       {label && (
         <Typography.Title level={5}>
-          <p className={`text-primary flex items-center gap-2` }>{label} {require && <span className="text-red">(*)</span>}</p> 
+          <p className={`text-inherit flex items-center gap-2` }>{label} {require && <span className="text-red">(*)</span>}</p> 
         </Typography.Title>
       )}
       {type == "radio" ? (

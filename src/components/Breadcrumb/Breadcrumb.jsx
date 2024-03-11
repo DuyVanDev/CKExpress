@@ -11,76 +11,83 @@ const Breadcrumb = () => {
 
   const pathName = location.pathname?.replace("/", "");
   const searchParam = queryParams.get("title");
-  const { menu, news } = globalState;
+  const { menu, news, career } = globalState;
 
   const link = menu.find((item) => item?.MenuUrl == pathName);
-  const detail =
+  const detailNew =
     searchParam &&
     Array.isArray(news) &&
     news?.find((item) => item?.UrlDetail == searchParam);
+
+  const detailCareer =
+    searchParam &&
+    Array.isArray(career) &&
+    career?.find((item) => item?.Url == searchParam);
+
+  console.log(detailNew);
   return (
     <>
       <nav className="container max-md:px-3">
-          {(searchParam || pathName != "") && (
-            <div className="flex items-center ">
-              <Link
-                className="flex items-center justify-between gap-3 text-start  py-3 pr-3 text-[15px] font-medium leading-8 whitespace-nowrap"
-                to={"/"}
-              >
-                Trang chủ
+        {(searchParam || pathName != "") && (
+          <div className="flex items-center ">
+            <Link
+              className="flex items-center justify-between gap-3 text-start  py-3 pr-3 text-[15px] font-medium leading-8 whitespace-nowrap"
+              to={"/"}
+            >
+              Trang chủ
+            </Link>
+            {detailNew?.ParentMenuId == 1418 && (
+              <Link to={"/khuyen-mai"} className="flex items-center gap-2 mr-2">
+                <RightOutlined />
+                <p className="text-transparent bg-clip-text bg-title-gradient">
+                  Khuyễn mãi
+                </p>
               </Link>
-              {detail?.ParentMenuId == 1418 && (
-                <Link
-                  to={"/khuyen-mai"}
-                  className="flex items-center gap-2 mr-2"
-                >
-                  <RightOutlined />
-                  <p className="text-transparent bg-clip-text bg-title-gradient">
-                    Khuyễn mãi
-                  </p>
-                </Link>
-              )}
-              {detail?.ParentMenuId == 1420 && (
-                <Link
-                  to={"/huong-dan"}
-                  className="flex items-center gap-2 mr-2"
-                >
-                  <RightOutlined />
-                  <p className="text-transparent bg-clip-text bg-title-gradient">
-                    Hướng dẫn
-                  </p>
-                </Link>
-              )}
-              {detail?.ParentMenuId == 1419 && (
-                <Link
-                  to={"/hoat-dong"}
-                  className="flex items-center gap-2 mr-2"
-                >
-                  <RightOutlined />
-                  <p className="text-transparent bg-clip-text bg-title-gradient">
-                    Hoạt động
-                  </p>
-                </Link>
-              )}
-              {link && (
-                <span className="flex items-center gap-2 mr-2">
-                  <RightOutlined />
-                  <p className="text-transparent bg-clip-text bg-title-gradient">
-                    {link?.MenuName}
-                  </p>
-                </span>
-              )}
-              {searchParam && (
-                <span className="flex items-center gap-2">
-                  <RightOutlined />{" "}
-                  <p className="text-transparent bg-clip-text bg-title-gradient">
-                    {detail?.NewsTitle}
-                  </p>
-                </span>
-              )}
-            </div>
-          )}
-        </nav>
+            )}
+            {detailNew?.ParentMenuId == 1420 && (
+              <Link to={"/huong-dan"} className="flex items-center gap-2 mr-2">
+                <RightOutlined />
+                <p className="text-transparent bg-clip-text bg-title-gradient">
+                  Hướng dẫn
+                </p>
+              </Link>
+            )}
+            {detailNew?.ParentMenuId == 1419 && (
+              <Link to={"/hoat-dong"} className="flex items-center gap-2 mr-2">
+                <RightOutlined />
+                <p className="text-transparent bg-clip-text bg-title-gradient">
+                  Hoạt động
+                </p>
+              </Link>
+            )}
+
+            {detailCareer?.ParentMenuId == 1424 && (
+              <Link to={"/tuyen-dung"} className="flex items-center gap-2 mr-2">
+                <RightOutlined />
+                <p className="text-transparent bg-clip-text bg-title-gradient">
+                  Tuyển dụng
+                </p>
+              </Link>
+            )}
+            {link && (
+              <span className="flex items-center gap-2 mr-2">
+                <RightOutlined />
+                <p className="text-transparent bg-clip-text bg-title-gradient">
+                  {link?.MenuName}
+                </p>
+              </span>
+            )}
+            {searchParam && (
+              <span className="flex items-center gap-2">
+                <RightOutlined />{" "}
+                <p className="text-transparent bg-clip-text bg-title-gradient">
+                  {detailNew?.NewsTitle || detailCareer?.CarrerName}
+                </p>
+              </span>
+            )}
+          </div>
+        )}
+      </nav>
     </>
   );
 };

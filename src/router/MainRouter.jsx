@@ -17,6 +17,7 @@ import { Shop_spWeb_Menu_List } from "@/data/menu/Menu";
 import { Shop_spWeb_Slide_List } from "@/data/Slide/Slide";
 import { Shop_spWeb_Service_List } from "@/data/service/Service";
 import { Shop_spWeb_News_List } from "@/data/news/News";
+import { Shop_spWeb_Career_List } from "@/data/career/Career";
 
 export const MainRouter = () => {
   const [globalState, dispatch] = useGlobalState();
@@ -27,6 +28,7 @@ export const MainRouter = () => {
     Shop_spWeb_Slide_List(dispatch)
     Shop_spWeb_Service_List(dispatch)
     Shop_spWeb_News_List(dispatch)
+    Shop_spWeb_Career_List(dispatch)
   }, [dispatch]);
 
 

@@ -24,6 +24,8 @@ const InfoCompany = lazy(() => import("@/pages/InfoCompany"));
 const CommonPage = lazy(() => import("@/pages/CommonPage"));
 const Service = lazy(() => import("@/pages/Service"));
 const Complain = lazy(() => import("@/pages/Complain"));
+const CareerDetail = lazy(() => import("@/pages/CareerDetail"));
+const Recruiment = lazy(() => import("@/pages/Recruiment"));
 
 export const publicRoute = [
   {
@@ -141,6 +143,16 @@ export const publicRoute = [
   {
     path: routes.postSystem,
     childrend: PostSystem,
+    layout: DefaultLayout,
+  },
+  {
+    path: routes.careerInfo,
+    childrend: CareerDetail,
+    layout: DefaultLayout,
+  },
+  {
+    path: routes.recruitment,
+    childrend: Recruiment,
     layout: DefaultLayout,
   },
 ];

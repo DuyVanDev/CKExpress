@@ -25,6 +25,8 @@ const routes = {
   rule: "/quy-dinh-chung",
   complain: "/khieu-nai",
   postSystem: "/diem-gui-hang",
+  careerInfo: "/thong-tin-tuyen-dung",
+  recruitment: "/ung-tuyen",
   notFound: "*",
 };
 

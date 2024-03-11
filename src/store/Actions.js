@@ -4,7 +4,8 @@ import {
   ADD_SLIDE,
   ADD_SERVICE,
   ADD_SETTING,
-  ADD_NEWS
+  ADD_NEWS,
+  ADD_CAREER
 } from "./Contants";
 
 export const addMenu = (payload) => ({
@@ -35,5 +36,10 @@ export const addAbout = (payload) => ({
 
 export const addNews = (payload) => ({
   type: ADD_NEWS,
+  payload,
+});
+
+export const addCareer = (payload) => ({
+  type: ADD_CAREER,
   payload,
 });
