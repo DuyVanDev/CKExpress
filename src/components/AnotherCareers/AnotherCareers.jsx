@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import moment from "moment"
 
 const AnotherServices = ({rest}) => {
-  console.log(rest)
   return (
     <div className="flex flex-col gap-2">
       <p className="text-2xl font-medium">Vị trí tuyển dụng khác</p>
@@ -19,7 +18,7 @@ const AnotherServices = ({rest}) => {
             <span className="flex flex-col gap-2">
               
               <p className="font-bold text-primary">{item?.CarrerName}</p>
-              <p className="text-xs">{moment(item?.CreateOn).format('MM/DD/YYYY')}</p>
+              <p className="text-xs">{moment(item?.CreateOn).format('DD/MM/YYYY')}</p>
             </span>
           </Link>
         ))}

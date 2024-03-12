@@ -7,8 +7,6 @@ const About = lazy(() => import("@/pages/About"));
 const Promotion = lazy(() => import("@/pages/News/Promotion"));
 const Activity = lazy(() => import("@/pages/News/Activity"));
 const Tutorial = lazy(() => import("@/pages/News/Tutorial"));
-const SignIn = lazy(() => import("@/pages/Auth/SignIn"));
-const SignUp = lazy(() => import("@/pages/Auth/SignUp"));
 const TrackingBill = lazy(() => import("@/pages/TrackingBill"));
 const RegisterPartner = lazy(() => import("@/pages/Partner/RegisterParner"));
 const CustomerCare = lazy(() => import("@/pages/CustomerCare"));
@@ -58,16 +56,6 @@ export const publicRoute = [
     path: routes.turtorial,
     childrend: Tutorial,
     layout: DefaultLayout,
-  },
-  {
-    path: routes.login,
-    childrend: SignIn,
-    layout: null,
-  },
-  {
-    path: routes.register,
-    childrend: SignUp,
-    layout: null,
   },
   {
     path: routes.trackingBill,

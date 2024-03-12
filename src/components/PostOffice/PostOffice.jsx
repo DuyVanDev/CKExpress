@@ -8,51 +8,51 @@ const PostOffice = () => {
   const { setting } = globalState;
 
   const list = [
-    {
-      post: "BƯU CỤC AN GIANG",
-      phone: "0972727848",
-      address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
-    },
-    {
-      post: "BƯU CỤC AN GIANG",
-      phone: "0972727848",
-      address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
-    },
-    {
-      post: "BƯU CỤC AN GIANG",
-      phone: "0972727848",
-      address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
-    },
-    {
-      post: "BƯU CỤC AN GIANG",
-      phone: "0972727848",
-      address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
-    },
-    {
-      post: "BƯU CỤC AN GIANG",
-      phone: "0972727848",
-      address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
-    },
-    {
-      post: "BƯU CỤC AN GIANG",
-      phone: "0972727848",
-      address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
-    },
-    {
-      post: "BƯU CỤC AN GIANG",
-      phone: "0972727848",
-      address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
-    },
-    {
-      post: "BƯU CỤC AN GIANG",
-      phone: "0972727848",
-      address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
-    },
-    {
-      post: "BƯU CỤC AN GIANG",
-      phone: "0972727848",
-      address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
-    },
+    // {
+    //   post: "BƯU CỤC AN GIANG",
+    //   phone: "0972727848",
+    //   address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
+    // },
+    // {
+    //   post: "BƯU CỤC AN GIANG",
+    //   phone: "0972727848",
+    //   address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
+    // },
+    // {
+    //   post: "BƯU CỤC AN GIANG",
+    //   phone: "0972727848",
+    //   address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
+    // },
+    // {
+    //   post: "BƯU CỤC AN GIANG",
+    //   phone: "0972727848",
+    //   address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
+    // },
+    // {
+    //   post: "BƯU CỤC AN GIANG",
+    //   phone: "0972727848",
+    //   address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
+    // },
+    // {
+    //   post: "BƯU CỤC AN GIANG",
+    //   phone: "0972727848",
+    //   address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
+    // },
+    // {
+    //   post: "BƯU CỤC AN GIANG",
+    //   phone: "0972727848",
+    //   address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
+    // },
+    // {
+    //   post: "BƯU CỤC AN GIANG",
+    //   phone: "0972727848",
+    //   address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
+    // },
+    // {
+    //   post: "BƯU CỤC AN GIANG",
+    //   phone: "0972727848",
+    //   address: "111 Đường 9, Tây Khánh 2, Mỹ Hòa, Long Xuyên",
+    // },
   ];
   const { Search } = Input;
   return (
@@ -76,7 +76,7 @@ const PostOffice = () => {
             />
             <div className="overflow-y-scroll h-[500px] ">
               <div className="px-3 flex flex-col gap-3">
-                {list.map((item, index) => (
+                {list?.map((item, index) => (
                   <div
                     key={index}
                     className="flex  justify-between p-4 border-[1px] border-lightgray rounded-md bg-background cursor-pointer"

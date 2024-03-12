@@ -24,21 +24,20 @@ const Breadcrumb = () => {
     Array.isArray(career) &&
     career?.find((item) => item?.Url == searchParam);
 
-  console.log(detailNew);
   return (
     <>
       <nav className="container max-md:px-3">
         {(searchParam || pathName != "") && (
           <div className="flex items-center ">
             <Link
-              className="flex items-center justify-between gap-3 text-start  py-3 pr-3 text-[15px] font-medium leading-8 whitespace-nowrap"
+              className="flex items-center justify-between gap-3 text-start  py-3 pr-3 text-[15px] font-medium leading-8 whitespace-nowrap text-secondary opacity-50"
               to={"/"}
             >
               Trang chủ
             </Link>
             {detailNew?.ParentMenuId == 1418 && (
               <Link to={"/khuyen-mai"} className="flex items-center gap-2 mr-2">
-                <RightOutlined />
+                <RightOutlined className="text-primary"/>
                 <p className="text-transparent bg-clip-text bg-title-gradient">
                   Khuyễn mãi
                 </p>
@@ -46,7 +45,7 @@ const Breadcrumb = () => {
             )}
             {detailNew?.ParentMenuId == 1420 && (
               <Link to={"/huong-dan"} className="flex items-center gap-2 mr-2">
-                <RightOutlined />
+                <RightOutlined className="text-primary"/>
                 <p className="text-transparent bg-clip-text bg-title-gradient">
                   Hướng dẫn
                 </p>
@@ -54,7 +53,7 @@ const Breadcrumb = () => {
             )}
             {detailNew?.ParentMenuId == 1419 && (
               <Link to={"/hoat-dong"} className="flex items-center gap-2 mr-2">
-                <RightOutlined />
+                <RightOutlined className="text-primary"/>
                 <p className="text-transparent bg-clip-text bg-title-gradient">
                   Hoạt động
                 </p>
@@ -63,7 +62,7 @@ const Breadcrumb = () => {
 
             {detailCareer?.ParentMenuId == 1424 && (
               <Link to={"/tuyen-dung"} className="flex items-center gap-2 mr-2">
-                <RightOutlined />
+                <RightOutlined className="text-primary"/>
                 <p className="text-transparent bg-clip-text bg-title-gradient">
                   Tuyển dụng
                 </p>
@@ -71,7 +70,7 @@ const Breadcrumb = () => {
             )}
             {link && (
               <span className="flex items-center gap-2 mr-2">
-                <RightOutlined />
+                <RightOutlined className="text-primary"/>
                 <p className="text-transparent bg-clip-text bg-title-gradient">
                   {link?.MenuName}
                 </p>
@@ -79,7 +78,7 @@ const Breadcrumb = () => {
             )}
             {searchParam && (
               <span className="flex items-center gap-2">
-                <RightOutlined />{" "}
+                <RightOutlined className="text-primary"/>{" "}
                 <p className="text-transparent bg-clip-text bg-title-gradient">
                   {detailNew?.NewsTitle || detailCareer?.CarrerName}
                 </p>

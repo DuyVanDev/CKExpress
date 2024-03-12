@@ -10,8 +10,6 @@ const routes = {
   promotions: "/khuyen-mai",
   turtorial: "/huong-dan",
   activity: "/hoat-dong",
-  login: "/dang-nhap",
-  register: "/dang-ky",
   trackingBill: "/tra-cuu-don-hang",
   career: "/tuyen-dung",
   promoDetails: "/chi-tiet-khuyen-mai",

@@ -16,6 +16,7 @@ const CommonPage = () => {
 
   const data =
     Array.isArray(news) && news?.find((item) => item.UrlDetail == paramValue);
+    const restData = data &&  news?.filter(item => item?.ParentMenuId == data?.ParentMenuId && item?.NewsId != data?.NewsId) 
   return (
     <div className="container ">
       <div className="flex  gap-6 pb-6 max-md:flex-col max-md:px-4">
@@ -32,7 +33,7 @@ const CommonPage = () => {
           </div>
         </div>
         <div className="basis-3/12">
-          <AnotherServices />
+          <AnotherServices menuName={data?.MenuName} restData={restData} />
         </div>
       </div>
     </div>

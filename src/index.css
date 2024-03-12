@@ -11,6 +11,10 @@ body {
  width: 4px;
 }
 
+h5.ant-typography.css-dev-only-do-not-override-asz0wb {
+  color: inherit;
+}
+
 /* header */
 
 ul.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.css-dev-only-do-not-override-asz0wb {
@@ -220,4 +224,16 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active  {
 ol {
   list-style: auto;
   padding-left:30px ;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }

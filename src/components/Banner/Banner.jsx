@@ -10,7 +10,6 @@ import { IMAGES_DOMAIN } from "@/services";
   
 const Banner = ({slide}) => {
 
-
   return (
     <div>
       <Swiper

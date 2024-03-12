@@ -14,7 +14,7 @@ const TrackingBill = () => {
 
         <Button className={"basis-1/12 max-md:w-full"} type="primary" danger> Tra cứu</Button>
        </div>
-      <p className="text-center">Mọi đóng góp ý kiến quý Khách Hàng vui lòng gửi mail cho ban TGĐ NETCO: ceo@netco.com.vn</p>
+      <p className="text-center">Mọi đóng góp ý kiến quý khách hàng vui lòng gửi về mail: CK EXPRESS@gtel.org.vn</p>
       <p className="text-center text-xl">Không tìm thấy vận đơn hoặc vận đơn đã vượt quá thời hạn tra cứu. Vui lòng tải app để xem thông tin</p>
       </div>
     </div>

@@ -1,8 +1,8 @@
 import { useGlobalState } from "@/hooks";
 import { IMAGES_DOMAIN } from "@/services";
-import { RemoveDau } from "@/utils/RemoveDau";
-import { PhoneOutlined, RightOutlined } from "@ant-design/icons";
-import { Card, Collapse, List, Menu } from "antd";
+import { RemoveAccents } from "@/utils/RemoveAccents";
+import { RightOutlined } from "@ant-design/icons";
+import { Card, List } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -37,13 +37,13 @@ const Footer = () => {
 
   return (
     <div className=" bg-footer bg-no-repeat bg-top  bg-cover w-full ">
-      <div className="bg-footermask flex flex-col p-4 max-md:px-4">
+      <div className="bg-primary flex flex-col p-4 max-md:px-4">
         <div className=" w-full z-30">
           <Card className=" bg-transparent container  border-0">
             <div className="grid grid-cols-4 max-md:grid-cols-1">
               {menuItems.map((menu, index) => (
                 <div key={index} style={{ flex: "0 0 25%" }}>
-                  <h2 className="text-primary text-xl font-medium">
+                  <h2 className="text-secondary text-xl font-medium">
                     {menu.MenuName}
                   </h2>
                   <List
@@ -51,13 +51,14 @@ const Footer = () => {
                     renderItem={(item) => (
                       <li className="mt-3 text-lg text-white !hover:text-green">
                         <i className="fa-solid fa-angle-right"></i>{" "}
-                        <Link className="text-inherit"
-                          to={
-                            {
-                            pathname: `/${RemoveDau(menu.MenuName.split(" ").join("-").toLowerCase())}`,
-                            search: `?title=${item?.MenuUrl}`
-                          }
-                        }
+                        <Link
+                          className="text-inherit text-md font-medium"
+                          to={{
+                            pathname: `/${RemoveAccents(
+                              menu.MenuName.split(" ").join("-").toLowerCase()
+                            )}`,
+                            search: `?title=${item?.MenuUrl}`,
+                          }}
                         >
                           {item.MenuName}
                         </Link>
@@ -75,7 +76,7 @@ const Footer = () => {
           {/* bottom top */}
           <div className="container grid lg:grid-cols-4  text-white py-6 gap-4  ">
             <div className="flex flex-col items-start gap-2 col-span-2 max-md:col-span-1">
-              <p className="font-medium text-primary text-lg mb-3">
+              <p className="font-medium text-secondary text-lg mb-3">
                 Trung tâm dịch vụ viễn thông - Chi nhánh tổng công ty Công nghệ
                 - Viễn thông toàn cầu
               </p>

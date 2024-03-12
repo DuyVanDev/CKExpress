@@ -30,7 +30,7 @@ const Info = () => {
               <div
                 className={`group bg-white w-[167px] h-[165px] rounded-md   p-4 flex items-center flex-col gap-4 cursor-pointer hover:bg-primary`}
               >
-                <img className="w" src={"https://admin-netco.vps.vn//Image/ckfinder/images/Vector.png"} />
+                <img className="" src={"https://admin-netco.vps.vn//Image/ckfinder/images/Vector.png"} />
                 <p className="group-hover:text-white text-sm text-center font-bold text-gray">
                   {item?.NewsTitle}
                 </p>
@@ -55,26 +55,7 @@ const Info = () => {
             <span className="text-primary">Đa dạng</span> dịch vụ vận chuyển
           </p>
           <div className="flex items-center ">
-            {/* {Array.isArray(data.child) &&
-          data?.child.map((item, index) =>{
-            const last = data.child.length - 1;
-            return (
-              (
-                <span
-                  key={index}
-                  className={`  text-lg px-4 cursor-pointer  uppercase font-bold ${
-                    index === indexTab
-                      ? ` decoration-4 relative after:content-[""]   after:absolute after:bottom-[-4px] after:h-[2px] after:bg-primary after:left-4 after:right-4 `
-                      : "text-black  "
-                  } ${index != last ? "border-r-2 ": " "}`}
-                  
-                  onClick={() => setIndexTab(index)}
-                >
-                  {item.title}
-                </span>
-              )
-            )
-          })} */}
+            
           </div>
           {renderContent()}
         </div>

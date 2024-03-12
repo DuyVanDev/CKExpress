@@ -1,9 +1,7 @@
 import Shadow from "@/components/Shadow/Shadow";
-import About from "../components/About/About";
 import Banner from "../components/Banner/Banner";
 import Contact from "../components/Contact/Contact";
 import Info from "../components/Info/Info";
-import Notify from "../components/Notify/Notify";
 import "@/index.css";
 import PostOffice from "@/components/PostOffice/PostOffice";
 import Slogan from "@/components/Slogan/Slogan";

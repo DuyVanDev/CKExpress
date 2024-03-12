@@ -13,7 +13,6 @@ export const Shop_spWeb_Career_List = async (dispatch) => {
   };
   try {
     const result = await callApi.Main(params);
-    console.log("result")
     const sortResultByIndexNumber = result?.sort((a,b) => a.IndexNumber - b.IndexNumber)
     result?.length && result?.length > 0 && dispatch(addCareer(sortResultByIndexNumber));
 

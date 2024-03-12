@@ -28,16 +28,16 @@ const CareerDetail = () => {
             <span className="font-semibold">Mức lương: </span> {data?.Salary}
           </div>
           <div>
-            <span className="font-semibold">Hạn chót nhận hồ sơ: </span> {moment(data?.Deadline).format('MM/DD/YYYY')}
+            <span className="font-semibold">Hạn chót nhận hồ sơ: </span> {moment(data?.Deadline).format('DD/MM/YYYY')}
           </div>
           <Link to={{
             pathname : "/ung-tuyen",
             search : `?title=${data?.Url}`
-          }} className="bg-red px-2 py-1 text-white">Nộp đơn</Link>
+          }} className="bg-primary rounded-sm hover:bg-secondary transition-all delay-75 px-2 py-1 text-white">Nộp đơn</Link>
         </div>
         <hr className="my-4" />
 
-        <h2 className="text-red font-semibold text-2xl mb-2">Phúc lợi</h2>
+        <h2 className="text-primary font-semibold text-2xl mb-2">Phúc lợi</h2>
         <div className="flex items-center mb-3">
           <div className="flex flex-col gap-2 flex-1">
             <span className="text-lg font-medium flex items-center gap-3"><i class="fa fa-medkit"></i>Bảo hiểm</span>

@@ -12,9 +12,12 @@ export const Shop_spWeb_Slide_List = async (dispatch) => {
     func: "Shop_spWeb_Slides_List",
   };
   try {
-    const result2 = await callApi.Main(params2);
+    const result = await callApi.Main(params2);
+    const sortResultByIndexNumber = result?.sort(
+      (a, b) => a.IndexNumber - b.IndexNumber
+    );
 
-    dispatch(addSlide(result2));
+    dispatch(addSlide(sortResultByIndexNumber));
   } catch (err) {
     console.log(err);
   }

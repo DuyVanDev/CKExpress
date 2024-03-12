@@ -26,27 +26,27 @@ const MenuPc = () => {
   const handleVisibleChange = (visibility) => {
     setVisible(visibility);
   };
-  const content = (
-    <div className="bg-gray w-[280px] flex flex-col">
-      <div className=" bg-lightgray p-2 text-lg font-medium cursor-pointer text-white border-b hover:bg-gray">
-        Thông báo
-      </div>
-      <div className="divide-y-[1px] divide-white">
-        <div className="p-2 flex flex-col gap-2 cursor-pointer">
-          <p className="text-md font-medium text-white">
-            Danh sách các điểm hạn chế giao hàng do ảnh hưởng dịch Covid-19
-          </p>
-          <p className="text-primary font-medium text-md">23/08/2021</p>
-        </div>
-        <div className="p-2 flex flex-col gap-2 cursor-pointer">
-          <p className="text-md font-medium text-white">
-            Danh sách các điểm hạn chế giao hàng do ảnh hưởng dịch Covid-19
-          </p>
-          <p className="text-primary font-medium text-md">23/08/2021</p>
-        </div>
-      </div>
-    </div>
-  );
+  // const content = (
+  //   <div className="bg-gray w-[280px] flex flex-col">
+  //     <div className=" bg-lightgray p-2 text-lg font-medium cursor-pointer text-white border-b hover:bg-gray">
+  //       Thông báo
+  //     </div>
+  //     <div className="divide-y-[1px] divide-white">
+  //       <div className="p-2 flex flex-col gap-2 cursor-pointer">
+  //         <p className="text-md font-medium text-white">
+  //           Danh sách các điểm hạn chế giao hàng do ảnh hưởng dịch Covid-19
+  //         </p>
+  //         <p className="text-primary font-medium text-md">23/08/2021</p>
+  //       </div>
+  //       <div className="p-2 flex flex-col gap-2 cursor-pointer">
+  //         <p className="text-md font-medium text-white">
+  //           Danh sách các điểm hạn chế giao hàng do ảnh hưởng dịch Covid-19
+  //         </p>
+  //         <p className="text-primary font-medium text-md">23/08/2021</p>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
   const [language, setLanguage] = useState(lg[0]);
   const [hover, setHover] = useState(false);
 
@@ -81,26 +81,28 @@ const MenuPc = () => {
                   <img className="w-8" src={language.img} alt="" />
                   <div className={`caret  `}></div>
                   <ul
-                  className={`menu  mt-[-24px]  justify-center flex-col shadow-lg rounded-md bg-white z-[100] `}
-                >
-                  {lg.map((item, index) => (
-                    <li
-                      key={index}
-                      onClick={() => {
-                        setLanguage(lg[index]);
-                        setHover(false);
-                      }}
-                      className="flex items-center justify-center gap-2  hover:bg-primary  rounded-md"
-                    >
-                      <span className="whitespace-nowrap text-md font-medium">
-                        {item.title}
-                      </span>{" "}
-                      <img className="w-10" src={item.img} alt="" />
-                    </li>
-                  ))}
-                </ul>
+                    className={`menu  mt-[-24px]  justify-center flex-col shadow-lg rounded-md bg-white z-[100] `}
+                  >
+                    {lg.map(
+                      (item, index) =>
+                        hover && (
+                          <li
+                            key={index}
+                            onClick={() => {
+                              setHover(false);
+                              setLanguage(lg[index]);
+                            }}
+                            className="flex items-center justify-center gap-2  hover:bg-primary  rounded-md"
+                          >
+                            <span className="whitespace-nowrap text-md font-medium">
+                              {item.title}
+                            </span>{" "}
+                            <img className="w-10" src={item.img} alt="" />
+                          </li>
+                        )
+                    )}
+                  </ul>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -115,18 +117,18 @@ const MenuPc = () => {
             <Link to={"/tra-cuu-don-hang"} className="text-white">
               <i className="fa-solid fa-magnifying-glass "></i>
             </Link>
-            <Popover
+            {/* <Popover
               className="z-[9999]"
               content={content}
               trigger="click"
               placement="bottomRight"
               visible={visible}
               onVisibleChange={handleVisibleChange}
-            >
-              <span className="text-white cursor-pointer">
-                <i className="fa-regular fa-bell"></i>
-              </span>
-            </Popover>
+            > */}
+            <span className="text-white cursor-pointer">
+              <i className="fa-regular fa-bell"></i>
+            </span>
+            {/* </Popover> */}
           </div>
         </div>
       </div>

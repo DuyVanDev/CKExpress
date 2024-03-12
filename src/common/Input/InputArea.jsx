@@ -1,14 +1,16 @@
-import React from 'react';
-import {  Input } from 'antd';
+import React from "react";
+import { Input } from "antd";
 const { TextArea } = Input;
 
-const InputArea = ({placeholder}) => (
-    <TextArea
-      placeholder={placeholder}
-      style={{
-        height: 120,
-        resize: 'none',
-      }}
-    />
+const InputArea = ({ placeholder, value = "", onChange = () => {} }) => (
+  <TextArea
+    placeholder={placeholder}
+    onChange={onChange}
+    value={value}
+    style={{
+      height: 120,
+      resize: "none",
+    }}
+  />
 );
 export default InputArea;

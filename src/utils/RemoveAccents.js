@@ -1,9 +1,6 @@
-export function RemoveDau(str) {
-    // Gộp nhiều dấu space thành 1 space
+export function RemoveAccents(str) {
     str = str.replace(/\s+/g, ' ');
-    // loại bỏ toàn bộ dấu space (nếu có) ở 2 đầu của chuỗi
     str = str.trim();
-    // bắt đầu xóa dấu tiếng việt  trong chuỗi
      str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
      str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
      str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
